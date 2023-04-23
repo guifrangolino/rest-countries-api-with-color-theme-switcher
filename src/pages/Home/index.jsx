@@ -27,10 +27,7 @@ function Home({toggleTheme}) {
   useEffect(() => {
     fetch('/data.json')
     .then(resp => resp.json())
-    .then(data => {
-      console.log(data[31])
-      setCountriesList(data.sort(() => Math.random() - 0.5))
-      })
+    .then(data => {setCountriesList(data.sort(() => Math.random() - 0.5))})
   }, [])
   
   const countriesFiltered = countriesList.filter(country => {
@@ -42,7 +39,6 @@ function Home({toggleTheme}) {
       }
     }
   })
-
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
