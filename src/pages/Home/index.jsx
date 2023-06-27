@@ -64,7 +64,7 @@ function Home({toggleTheme}) {
           options={options} 
           defaultValue={options[0]}
           className="react-select-container"
-          onChange={(item) => console.log(setFilter(item.value))}
+          onChange={(item) => setFilter(item.value)}
           classNamePrefix="react-select"
           theme={(theme) => ({
             ...theme,
